@@ -11,9 +11,9 @@ app.use(express.json());
 app.use("/users",userController)
 app.post("/register",register);
 app.post("/login",login);
-// app.post('/login', authenticate);
 
-// Add middleware to handle logout
+
+
 app.use('/logout',userController);
 app.use("/products",productController)
 app.listen(5000,async()=>{

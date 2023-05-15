@@ -4,6 +4,7 @@ const {logout} =require("../middlewares/authentication")
 const router =express.Router();
 
 router.post("",logout,async(req,res)=>{
+    
     try{
         // req.headers.authorization="";
         let user = await User.findOne({email:req.body.email});

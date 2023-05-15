@@ -34,7 +34,8 @@ const verifyToken=(token)=>{
 
  function authenticate(req, res, next) {
     passport.authenticate('local', { session: false }, async(err, user, info) => {
-      if (err) {
+     
+     if (err) {
         return next(err);
       }
   

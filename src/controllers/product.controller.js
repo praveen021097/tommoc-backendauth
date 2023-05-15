@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Product = require("../models/product.model")
 const {authenticate} = require("../middlewares/authentication")
-
 router.post("",authenticate,async(req,res)=>{
 
 
